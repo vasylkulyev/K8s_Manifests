@@ -1,0 +1,15 @@
+name: CI
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: If YAML Exist
+        run: find . -type f -iname "*.yaml" | wc -l | { read c_result; test $c_result -gt 1 && exit 0 || exit 1; }
