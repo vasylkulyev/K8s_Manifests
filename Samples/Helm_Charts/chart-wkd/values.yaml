@@ -1,0 +1,4 @@
+container:
+  image: hubDocker/k8s:latest
+
+replicaCount: 2

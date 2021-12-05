@@ -1,0 +1,7 @@
+# helm repo add bitnami https://charts.bitnami.com/bitnami
+# helm install name-of-site bitnami/apache -f apache_mywebpage.yaml
+
+cloneHtdocsFromGit:
+     enabled   : true
+     repository: https://github.com/nobody/resume
+     branch    : main
